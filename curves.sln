@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurveFunctions", "CurveFunctions\CurveFunctions.csproj", "{EA053614-3710-4661-B54F-F94D609127AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurveFunctions.Tests", "CurveFunctions.Tests\CurveFunctions.Tests.csproj", "{29D1C904-0D3E-45A9-BE6C-C379091D493A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA053614-3710-4661-B54F-F94D609127AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA053614-3710-4661-B54F-F94D609127AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA053614-3710-4661-B54F-F94D609127AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA053614-3710-4661-B54F-F94D609127AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29D1C904-0D3E-45A9-BE6C-C379091D493A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29D1C904-0D3E-45A9-BE6C-C379091D493A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29D1C904-0D3E-45A9-BE6C-C379091D493A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29D1C904-0D3E-45A9-BE6C-C379091D493A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1140346-4346-40C6-93F8-4BA77BD6D646}
+	EndGlobalSection
+EndGlobal
