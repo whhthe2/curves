@@ -2,6 +2,9 @@
 
 namespace CurveFunctions.Tests
 {
+    //After constructing the printer, assign values to its Input property.
+    //For each input you set, the system integrates the function.
+    //When you're done, call print to draw all integrated functions in a single graph.
     internal class GraphPrinter
     {
         public Func<IInterpolatorInput, float> Function { get; set; }

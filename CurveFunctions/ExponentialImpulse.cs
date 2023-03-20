@@ -15,17 +15,17 @@ namespace CurveFunctions
             public float Time { get; set; }
         }
 
-        public static float ExponentialImpulse(IInterpolatorInput parameters)
-        {
-            var input = (ExponentialImpulseInput)parameters;
-            return ExponentialImpulse(input.Velocity, input.Magnitude, input.Time);
-        }
 
         public static float ExponentialImpulse(float velocity, float magnitude, float time)
         {
             float h = velocity * time;
             float result = h * MathF.Exp(1.0f - h);
             return result * magnitude;
+        }
+        public static float ExponentialImpulse(IInterpolatorInput parameters)
+        {
+            var input = (ExponentialImpulseInput)parameters;
+            return ExponentialImpulse(input.Velocity, input.Magnitude, input.Time);
         }
     }
 }

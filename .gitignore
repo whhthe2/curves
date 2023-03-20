@@ -1,4 +1,4 @@
 [Bb]in/
 [Oo]bj/
-[Oo]ut/**/obj/*
-**/bin/*
+[Oo]ut/
+.vs

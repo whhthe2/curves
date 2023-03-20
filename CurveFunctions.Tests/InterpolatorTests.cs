@@ -91,4 +91,23 @@ public class InterpolatorTests
         printer.Print();
     }
 
+    [Fact]
+    public void Interpolator_AlmostIdentity_Graph()
+    {
+        var size = 25;
+        var printer = new GraphPrinter(output, size, Interpolator.AlmostIdentity);
+        printer.Input = new Interpolator.AlmostIdentityInput { Floor = 5f, Threshold = 15f, Magnitude = size };
+        printer.Print();
+    }
+
+    [Fact]
+    public void Interpolator_Smoothstep_Graph()
+    {
+        var size = 25;
+        var printer = new GraphPrinter(output, size, Interpolator.Smoothstep);
+        printer.Input = new Interpolator.SmoothStepInput { Edge0 = 0.10f, Edge1 = 0.9f, Magnitude = size };
+        printer.Input = new Interpolator.SmoothStepInput { Edge0 = 0.33f, Edge1 = 0.66f, Magnitude = size };
+        printer.Print();
+    }
+
 }
