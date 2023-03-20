@@ -26,15 +26,18 @@ namespace CurveFunctions.Tests
         
         private ITestOutputHelper output { get; }
 
-        public GraphPrinter(ITestOutputHelper output, int size) 
+        public GraphPrinter(ITestOutputHelper output, int size, Func<IInterpolatorInput, float> func) 
         {
-            this.size = size;
             this.output = output;
+            this.size = size;
+            Function = func;
+            
+            //draw empty cells and axis labels
             graph = Initialize();
-
-            //initialize to empty but valid values to avoid talking about nulls all the time.
+            
+            //assigning directly to field to avoid graphing anything
+            //initializing input to empty to avoid talking about nulls all the time
             input = new Interpolator.EmptyInput();
-            Function = (IInterpolatorInput i) => 0f;
         }
 
 

@@ -52,7 +52,7 @@ public class InterpolatorTests
     [Fact]
     public void Interpolator_Lerp_Graph()
     {
-        var printer = new GraphPrinter(output, 20);
+        var printer = new GraphPrinter(output, 20, Interpolator.Lerp);
         printer.Function = Interpolator.Lerp;
         printer.Input = new Interpolator.LerpInput
         {
@@ -66,4 +66,29 @@ public class InterpolatorTests
         };
         printer.Print();
     }
+
+    [Fact]
+    public void Interpolator_ExponentialImpulse_Peak()
+    {
+        //the exponential impulse function produces its peak when time = 1/velocity
+        var velocity = 5f;
+        var peak = 25f;
+        var result = Interpolator.ExponentialImpulse(velocity, peak, 1 / velocity);
+        Assert.Equal(peak, result);
+    }
+
+    [Theory]
+    [InlineData(1f)]
+    [InlineData(2f)]
+    [InlineData(5f)]
+    [InlineData(10f)]
+    [InlineData(30f)]
+    public void Interpolator_Impulse_Graph(float velocity)
+    {
+        var size = 25;
+        var printer = new GraphPrinter(output, size, Interpolator.ExponentialImpulse);
+        printer.Input = new Interpolator.ExponentialImpulseInput { Velocity = velocity, Magnitude = size };
+        printer.Print();
+    }
+
 }
